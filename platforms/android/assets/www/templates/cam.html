@@ -1,0 +1,27 @@
+
+<ion-view title="Upload">
+  <ion-content ng-controller="CamCtrl" class="has-header padding scroll">
+	<div class="list">
+		<form name="myForm">
+			
+			<div class="item">
+				<button class="button button-block button-positive icon-left ion-ios7-camera" ng-click="takePicture()">Camera</button>
+                <button class="button button-block button-positive icon-left ion-ios7-camera" ng-click="getPicture()">Album</button>
+                <progress max="100" value="0" id="ft-prog"></progress>
+			</div>
+            <div id="image" style="height:50px;width=50px"><img ng-src="{{ mypicture }}" width="100%" /></div>
+			<div class="padding">
+				<button class="button button-positive icon-right ion-chevron-right" ng-click="upload()">Upload</button>
+                
+			</div>
+		</form>
+	</div>
+  </ion-content>
+  <ion-footer-bar>
+      <a class="button button-icon icon ion-home" ui-sref="app.home"></a>
+      <a href="#" onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W4MRJZZ92TDZU', '_system', 'location=yes'); return false;">
+          <input src="img/paypal-donate-button.png" alt="PayPal - The safer, easier way to pay online!" border="0" type="image" />
+      </a>
+  </ion-footer-bar>
+
+</ion-view>

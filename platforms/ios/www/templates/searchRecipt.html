@@ -1,0 +1,44 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">My Donations</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeLogin()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content ng-controller="AppCtrl" ng-init="receiptLoad()">
+        <form ng-submit="doLogin()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <input type="text" ng-model="loginData.first">
+                        </label>
+                <label class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" ng-model="loginData.last">
+                        </label>
+                <label class="item item-input">
+                    <span class="input-label">Zip Code</span>
+                    <input type="text" ng-model="loginData.zip">
+                        </label>
+                <label class="item item-input">
+                    <span class="input-label">Receipt Number</span>
+                    <input type="text" ng-model="loginData.rcptnumber">
+                        </label>
+                
+                
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">View Donations</button>
+                </label>
+               
+                
+                
+            </div>
+        </form>
+    </ion-content>
+    <ion-footer-bar>
+        <a class="button button-icon icon ion-home" ui-sref="app.home"></a>
+        <a href="#" onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W4MRJZZ92TDZU', '_system', 'location=yes'); return false;">
+            <input src="img/paypal-donate-button.png" alt="PayPal - The safer, easier way to pay online!" border="0" type="image" />
+        </a>
+    </ion-footer-bar>
+</ion-modal-view>

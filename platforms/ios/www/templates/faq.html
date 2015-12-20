@@ -1,0 +1,13 @@
+<ion-view view-title="FAQ">
+  <ion-content ng-controller='AppCtrl' ng-init="loadFAQ()">
+     
+   <div style="top:20px;height=80%" id="content"></div>
+  </ion-content>
+  <ion-footer-bar>
+      <a class="button button-icon icon ion-home" ui-sref="app.home"></a>
+      <a class="pull-right" href="#" onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W4MRJZZ92TDZU', '_system', 'location=yes'); return false;">
+          <input src="img/paypal-donate-button.png" alt="PayPal - The safer, easier way to pay online!" border="2" type="image" />
+      </a>
+      
+  </ion-footer-bar>
+</ion-view>

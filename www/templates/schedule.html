@@ -1,0 +1,27 @@
+<ion-view view-title="Schedule">
+    <ion-content  ng-controller="listCtlr_schedule" ng-init="loadSchedule()">
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="loadSchedule()">
+        </ion-refresher>
+
+        <div>
+            <ion-list>
+                <div ng-repeat="bssschedule in bssschedules">
+                    <ion-item class="item-stable">
+                        <p style="word-wrap: break-word;white-space: normal;"><b>{{bssschedule.name}}</b></p>
+                        <button class="button button-block button-positive" type="submit" ng-click="addtoCalendar(bssschedule.name)">Add to Calendar</button>
+                        </ion-item>
+                    
+                    
+                </div>
+            </ion-list>
+        </div>
+    </ion-content>
+    <ion-footer-bar>
+        <a class="button button-icon icon ion-home" ui-sref="app.home"></a>
+        <a href="#" onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W4MRJZZ92TDZU', '_system', 'location=yes'); return false;">
+            <input src="img/paypal-donate-button.png" alt="PayPal - The safer, easier way to pay online!" border="0" type="image" />
+        </a>
+    </ion-footer-bar>
+</ion-view>
